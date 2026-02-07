@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Award, BookOpen, Heart, Target, Globe, Phone, Mail, MapPin } from 'lucide-react';
-import logo from '../assets/Logo.png';
+import logo from '../assets/logo.png';
 
 const AboutUs = () => {
   return (
