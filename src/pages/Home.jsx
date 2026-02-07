@@ -3,7 +3,7 @@ import { BookOpen, Video, Users, Phone, Mail, MapPin, ArrowRight, Award } from '
 import { Link } from 'react-router-dom';
 import gateVideo from '../assets/disha_gate-open.mp4';
 import prospectus from '../assets/Disha_2026.pdf';
-import logo from '../assets/logo.png';
+import logo from '../assets/Logo.png';
 
 const Home = () => {
   const videoRef = React.useRef(null);
