@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Video, Users, Phone, Mail, MapPin, ArrowRight, Award } from 'lucide-react';
+import { BookOpen, Video, Users, Phone, Mail, MapPin, ArrowRight, Award, Target, Heart, Globe, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import gateVideo from '../assets/disha_gate-open.mp4';
 import prospectus from '../assets/Disha_2026.pdf';
@@ -8,6 +8,17 @@ import Navbar from '../components/Navbar';
 
 const Home = () => {
   const videoRef = React.useRef(null);
+  const [showPopup, setShowPopup] = React.useState(false);
+
+  React.useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.5;
+    }
+    const timer = setTimeout(() => {
+        setShowPopup(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleVideoEnd = () => {
     if (videoRef.current) {
@@ -15,9 +26,45 @@ const Home = () => {
     }
   };
 
+  const closePopup = () => {
+    setShowPopup(false);
+  }
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
       
+      {showPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center">
+            <div className="bg-white p-8 rounded-lg shadow-2xl max-w-sm w-full text-center relative">
+                <button onClick={closePopup} className="absolute top-2 right-2 text-slate-500 hover:text-slate-800">
+                    <X size={24} />
+                </button>
+                <h3 className="text-2xl font-bold text-blue-900 mb-4">Welcome to Disha Nucleus!</h3>
+                <p className="text-slate-600 mb-6">Admissions for the 2026-27 session are now open. Download our prospectus to learn more.</p>
+                <div className="flex flex-col gap-4">
+                    <button
+                        onClick={() => {
+                            window.open(prospectus, '_blank');
+                            closePopup();
+                        }}
+                        className="bg-yellow-500 text-slate-900 px-6 py-3 rounded-lg font-bold shadow-lg hover:bg-yellow-400 transition"
+                    >
+                        Download Prospectus
+                    </button>
+                    <button 
+                        onClick={() => {
+                            window.open('https://cbseacademic.nic.in/sqp_classx_2025-26.html', '_blank');
+                            closePopup();
+                        }}
+                        className="px-6 py-3 rounded-lg border border-slate-300 font-semibold hover:bg-slate-100 transition"
+                    >
+                        Download Sample Paper
+                    </button>
+                </div>
+            </div>
+        </div>
+      )}
+
       {/* 1. Top Bar (Professional Contact Strip) */}
       <div className="bg-slate-900 text-slate-300 py-2 text-xs">
         <div className="container mx-auto px-6 flex justify-between items-center">
@@ -126,29 +173,100 @@ const Home = () => {
         </div>
       </div>
 
-      {/* 6. Features Grid */}
-      <div className="bg-slate-50 py-24">
+       {/* Mission & Vision Section */}
+       <div className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Our Mission</h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                To provide holistic education that develops intellectually brilliant, morally upright, and socially responsible citizens. We believe in nurturing every student's potential through quality teaching, state-of-the-art infrastructure, and a supportive learning environment.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <Target className="text-blue-600 mt-1 flex-shrink-0" size={20} />
+                  <span className="text-slate-700">Excellence in academics and character development</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Heart className="text-blue-600 mt-1 flex-shrink-0" size={20} />
+                  <span className="text-slate-700">Fostering values of integrity and compassion</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Globe className="text-blue-600 mt-1 flex-shrink-0" size={20} />
+                  <span className="text-slate-700">Preparing students for global opportunities</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Our Vision</h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                To be a beacon of academic excellence and character formation, creating leaders and changemakers who contribute positively to society. We envision a school where every student discovers their potential and grows into a responsible global citizen.
+              </p>
+              <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+                <p className="text-slate-700 font-semibold italic">
+                  "Excellence in Education & Character Building"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Journey & History */}
+      <div className="py-20 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-             <h3 className="text-blue-900 font-bold tracking-widest uppercase text-xs mb-3">Why Choose Disha Nucleus?</h3>
-             <h3 className="text-3xl md:text-4xl font-bold text-slate-900">A World-Class Learning Ecosystem</h3>
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Journey</h2>
+            <p className="text-lg text-slate-600">More than two decades of excellence</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <TimelineItem year="2002" title="Inception" desc="Disha Nucleus School was founded with a vision to provide quality education to all." />
+            <TimelineItem year="2008" title="CBSE Affiliation" desc="Achieved CBSE affiliation (Affiliation No. 331023) to standardize education quality." />
+            <TimelineItem year="2015" title="Excellence Recognition" desc="Established track record in board exams, JEE, and NEET preparations." />
+            <TimelineItem year="2024" title="Modern Campus" desc="Upgraded facilities with digital classrooms and advanced laboratories." />
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us */}
+      <div className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h3 className="text-blue-900 font-bold tracking-widest uppercase text-xs mb-3">Why Choose Disha Nucleus?</h3>
+            <h2 className="text-4xl font-bold text-slate-900">What Makes Us Different</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureCard 
-              icon={<Video className="w-8 h-8 text-blue-600" />}
-              title="Interactive Live Classes" 
-              desc="Seamless Zoom integration for real-time learning. Attend classes from the safety of your home."
+            <FeatureBox 
+              icon={<Users size={32} />}
+              title="Experienced Faculty" 
+              desc="50+ expert teachers with years of experience in their respective subjects and pedagogical innovation."
             />
-            <FeatureCard 
-              icon={<BookOpen className="w-8 h-8 text-blue-600" />}
-              title="Digital Library & Notes" 
-              desc="24/7 access to high-quality PDF notes, recorded lectures, and assignments."
+            <FeatureBox 
+              icon={<BookOpen size={32} />}
+              title="Comprehensive Curriculum" 
+              desc="Balanced approach combining academic excellence with skill development and character formation."
             />
-            <FeatureCard 
-              icon={<Award className="w-8 h-8 text-blue-600" />}
-              title="Proven Track Record" 
-              desc="Consistently producing toppers in CBSE Boards, JEE, and NEET exams."
+            <FeatureBox 
+              icon={<Award size={32} />}
+              title="Proven Results" 
+              desc="Consistent toppers in CBSE Boards, 100% pass rate, and remarkable success in JEE & NEET."
+            />
+            <FeatureBox 
+              icon={<Globe size={32} />}
+              title="Digital Learning" 
+              desc="State-of-the-art infrastructure with interactive classrooms and 24/7 access to online resources."
+            />
+            <FeatureBox 
+              icon={<Heart size={32} />}
+              title="Holistic Development" 
+              desc="Focus on sports, arts, and co-curricular activities alongside academics for all-round growth."
+            />
+            <FeatureBox 
+              icon={<Target size={32} />}
+              title="Personalized Attention" 
+              desc="Small class sizes ensuring individual attention and customized learning plans for each student."
             />
           </div>
         </div>
@@ -215,5 +333,21 @@ const FeatureCard = ({ icon, title, desc }) => (
     <p className="text-slate-600 leading-relaxed text-sm">{desc}</p>
   </div>
 );
+
+const TimelineItem = ({ year, title, desc }) => (
+    <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-600 text-center">
+      <h3 className="text-2xl font-bold text-blue-900 mb-2">{year}</h3>
+      <h4 className="text-lg font-semibold text-slate-900 mb-2">{title}</h4>
+      <p className="text-slate-600 text-sm">{desc}</p>
+    </div>
+  );
+  
+  const FeatureBox = ({ icon, title, desc }) => (
+    <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition">
+      <div className="text-blue-600 mb-4">{icon}</div>
+      <h4 className="text-xl font-bold text-slate-900 mb-3">{title}</h4>
+      <p className="text-slate-600 text-sm leading-relaxed">{desc}</p>
+    </div>
+  );
 
 export default Home;
