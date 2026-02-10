@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Award, BookOpen, Heart, Target, Globe, Phone, Mail, MapPin } from 'lucide-react';
 import logo from '../assets/logo.png';
+import Navbar from '../components/Navbar';
 
 const AboutUs = () => {
   return (
@@ -18,44 +19,8 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* 2. Navbar */}
-      <header className="sticky top-0 z-50 bg-white shadow-md border-b border-slate-100">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo Area */}
-          <div className="flex items-center gap-3">
-             <img src={logo} alt="Disha Nucleus Logo" className="w-10 h-10 shadow-lg rounded-lg" />
-             <div>
-                <h1 className="text-2xl font-bold text-slate-900 leading-none">Disha Nucleus</h1>
-                <p className="text-[10px] text-slate-500 tracking-widest font-bold mt-1 uppercase">Senior Secondary School</p>
-             </div>
-          </div>
-          
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-8 items-center font-medium text-sm">
-            <Link to="/" className="text-slate-600 hover:text-blue-900 transition">Home</Link>
-            <Link to="/about" className="text-blue-900 font-semibold">About Us</Link>
-            <Link to="#" className="text-slate-600 hover:text-blue-900 transition">Academics</Link>
-            
-            {/* Action Buttons */}
-            <div className="flex gap-3 ml-4">
-                <Link to="/student" className="px-5 py-2.5 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-blue-50 transition text-sm">
-                Student Portal
-                </Link>
-                <Link to="/admin" className="px-5 py-2.5 rounded-full bg-blue-900 text-white font-semibold shadow-lg hover:bg-blue-800 transition hover:shadow-xl text-sm">
-                Admin Login
-                </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      {/* 3. Page Header */}
-      <div className="bg-gradient-to-r from-blue-900 to-slate-900 text-white py-16 md:py-24">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-4">About Disha Nucleus</h1>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto">A Legacy of Excellence in Education & Character Building Since 2002</p>
-        </div>
-      </div>
+      {/* 2. Navbar (responsive) */}
+      <Navbar />
 
       {/* 4. Mission & Vision Section */}
       <div className="py-20 bg-white">

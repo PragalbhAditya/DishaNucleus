@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import gateVideo from '../assets/disha_gate-open.mp4';
 import prospectus from '../assets/Disha_2026.pdf';
 import logo from '../assets/logo.png';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
   const videoRef = React.useRef(null);
@@ -28,36 +29,8 @@ const Home = () => {
         </div>
       </div>
 
-      {/* 2. Navbar (Clean & Sticky) */}
-      <header className="sticky top-0 z-50 bg-white shadow-md border-b border-slate-100">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo Area */}
-          <div className="flex items-center gap-3">
-             <img src={logo} alt="Disha Nucleus Logo" className="w-10 h-10 shadow-lg rounded-lg" />
-             <div>
-                <h1 className="text-2xl font-bold text-slate-900 leading-none">Disha Nucleus</h1>
-                <p className="text-[10px] text-slate-500 tracking-widest font-bold mt-1 uppercase">Senior Secondary School</p>
-             </div>
-          </div>
-          
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-8 items-center font-medium text-sm">
-            <Link to="/" className="text-slate-600 hover:text-blue-900 transition">Home</Link>
-            <Link to="/about" className="text-slate-600 hover:text-blue-900 transition">About Us</Link>
-            <Link to="/academics" className="text-slate-600 hover:text-blue-900 transition">Academics</Link>
-            
-            {/* Action Buttons */}
-            <div className="flex gap-3 ml-4">
-                <Link to="/student" className="px-5 py-2.5 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-blue-50 transition text-sm">
-                Student Portal
-                </Link>
-                <Link to="/admin" className="px-5 py-2.5 rounded-full bg-blue-900 text-white font-semibold shadow-lg hover:bg-blue-800 transition hover:shadow-xl text-sm">
-                Admin Login
-                </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
+      {/* 2. Navbar (responsive) */}
+      <Navbar />
 
       {/* 3. Hero Section (Modern Gradient) */}
       <div className="relative text-white py-24 md:py-32 overflow-hidden">
