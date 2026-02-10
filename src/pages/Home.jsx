@@ -8,6 +8,12 @@ import logo from '../assets/logo.png';
 const Home = () => {
   const videoRef = React.useRef(null);
 
+  const handleVideoEnd = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800">
       
@@ -57,9 +63,10 @@ const Home = () => {
       <div className="relative text-white py-24 md:py-32 overflow-hidden">
         {/* Background Video */}
         <video 
+          ref={videoRef}
           autoPlay 
           muted 
-          loop 
+          onEnded={handleVideoEnd}
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source src={gateVideo} type="video/mp4" />
@@ -199,10 +206,10 @@ const Home = () => {
               <h4 className="text-white text-lg font-bold mb-4">Contact Information</h4>
               <p className="text-sm flex items-start gap-3 mb-3">
                 <MapPin size={18} className="text-blue-500 mt-1"/> 
-                <span>Near Indoor Stadium, Sandy,<br/>Hajipur, Vaishali</span>
+                <span>Near Indoor Stadium, Sandy,<br/>Ghooran Peer Baba Chowk Chhoti Khanjarpur, Bhagalpur, Bihar- 812001</span>
               </p>
               <p className="text-sm flex items-center gap-3 mb-3">
-                <Phone size={18} className="text-blue-500"/> +91 99340 11111
+                <Phone size={18} className="text-blue-500"/> +91 64124 34301
               </p>
               <p className="text-sm flex items-center gap-3">
                 <Mail size={18} className="text-blue-500"/> principal@dishanucleus.in
@@ -210,7 +217,7 @@ const Home = () => {
            </div>
         </div>
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-500">
-           &copy; 2026 Disha Nucleus School. All rights reserved. | Developed by Nainix Dev
+           &copy; 2026 Disha Nucleus School. All rights reserved. | Developed by Xenophine
         </div>
       </footer>
     </div>
