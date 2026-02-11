@@ -8,27 +8,28 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md border-b border-slate-100">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="Disha Nucleus Logo" className="w-10 h-10 shadow-lg rounded-lg" />
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <div className="flex items-center gap-1 p-1 border rounded-lg">
+          <img src={logo} alt="Disha Nucleus Logo" className="w-9 h-9" />
           <div>
-            <h1 className="text-2xl font-bold text-slate-900 leading-none">Disha Nucleus</h1>
-            <p className="text-[10px] text-slate-500 tracking-widest font-bold mt-1 uppercase">Senior Secondary School</p>
+            <h1 className="text-xl font-bold text-slate-900 leading-none">Disha Nucleus</h1>
+            <p className="text-[8px] text-slate-500 tracking-wider font-bold uppercase">Senior Secondary School</p>
+            <p className="text-[7px] text-slate-500 tracking-wider uppercase">A Unit Of Chandrakala Sinha Gyanoday Trust</p>
           </div>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-8 items-center font-medium text-sm">
+        <nav className="hidden md:flex space-x-4 items-center font-medium text-sm">
           <Link to="/" className="text-slate-600 hover:text-blue-900 transition">Home</Link>
           <Link to="/about" className="text-slate-600 hover:text-blue-900 transition">About Us</Link>
           <Link to="/academics" className="text-slate-600 hover:text-blue-900 transition">Academics</Link>
 
-          <div className="flex gap-3 ml-4">
-            <Link to="/student" className="px-5 py-2.5 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-blue-50 transition text-sm">
-              Student Portal
+          <div className="flex gap-1 ml-2">
+            <Link to="/student" className="px-4 py-2 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-blue-50 transition text-sm">
+              Student
             </Link>
-            <Link to="/admin" className="px-5 py-2.5 rounded-full bg-blue-900 text-white font-semibold shadow-lg hover:bg-blue-800 transition hover:shadow-xl text-sm">
-              Admin Login
+            <Link to="/admin" className="px-4 py-2 rounded-full bg-blue-900 text-white font-semibold shadow-lg hover:bg-blue-800 transition hover:shadow-xl text-sm">
+              Admin
             </Link>
           </div>
         </nav>
@@ -53,10 +54,10 @@ export default function Navbar() {
 
             <div className="flex flex-col sm:flex-row gap-3 mt-3">
               <Link to="/student" onClick={() => setOpen(false)} className="px-4 py-2 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-blue-50 text-sm text-center">
-                Student Portal
+                Student
               </Link>
               <Link to="/admin" onClick={() => setOpen(false)} className="px-4 py-2 rounded-full bg-blue-900 text-white font-semibold hover:bg-blue-800 text-sm text-center">
-                Admin Login
+                Admin
               </Link>
             </div>
           </nav>

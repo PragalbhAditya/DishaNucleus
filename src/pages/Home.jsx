@@ -5,6 +5,8 @@ import gateVideo from '../assets/disha_gate-open.mp4';
 import prospectus from '../assets/Disha_2026.pdf';
 import logo from '../assets/logo.png';
 import Navbar from '../components/Navbar';
+import Gallery from '../components/Gallery';
+import Teachers from '../components/Teachers';
 
 const Home = () => {
   const videoRef = React.useRef(null);
@@ -229,6 +231,8 @@ const Home = () => {
         </div>
       </div>
 
+      <Teachers />
+
       {/* Why Choose Us */}
       <div className="py-20 bg-white">
         <div className="container mx-auto px-6">
@@ -237,40 +241,52 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-slate-900">What Makes Us Different</h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <FeatureBox 
-              icon={<Users size={32} />}
-              title="Experienced Faculty" 
-              desc="50+ expert teachers with years of experience in their respective subjects and pedagogical innovation."
-            />
-            <FeatureBox 
-              icon={<BookOpen size={32} />}
-              title="Comprehensive Curriculum" 
-              desc="Balanced approach combining academic excellence with skill development and character formation."
-            />
-            <FeatureBox 
-              icon={<Award size={32} />}
-              title="Proven Results" 
-              desc="Consistent toppers in CBSE Boards, 100% pass rate, and remarkable success in JEE & NEET."
-            />
-            <FeatureBox 
-              icon={<Globe size={32} />}
-              title="Digital Learning" 
-              desc="State-of-the-art infrastructure with interactive classrooms and 24/7 access to online resources."
-            />
-            <FeatureBox 
-              icon={<Heart size={32} />}
-              title="Holistic Development" 
-              desc="Focus on sports, arts, and co-curricular activities alongside academics for all-round growth."
-            />
-            <FeatureBox 
-              icon={<Target size={32} />}
-              title="Personalized Attention" 
-              desc="Small class sizes ensuring individual attention and customized learning plans for each student."
-            />
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <FeatureBox 
+        icon={<BookOpen size={32} />}
+        title="Concept-Driven Learning" 
+        desc="Focus on building strong concepts and deep understanding, not rote memorization. Moving from rote memorization to Concept-Driven Learning is like learning to build with LEGOs instead of just memorizing what the final house looks like."
+      />
+      <FeatureBox 
+        icon={<Users size={32} />}
+        title="Experienced & Dedicated Faculty" 
+        desc="Our team brings decades of combined expertise to every project, ensuring that we don't just meet standards-we set them. We continuously integrate emerging technologies and modern methodologies to stay ahead of educational trends."
+      />
+      <FeatureBox 
+        icon={<Target size={32} />}
+        title="Board + Competitive Exam Focus" 
+        desc="To get success in both we apply dual strategy: mastering the foundational NCERT/Textbook theory for Boards while simultaneously practicing time-bound problem-solving for competitive success."
+      />
+      <FeatureBox 
+        icon={<Heart size={32} />}
+        title="Discipline-Focus-Values" 
+        desc="Discipline provides the structure for consistency, while focus directs that energy toward specific goals. Anchored by core values, these traits transform potential into achievement."
+      />
+      <FeatureBox 
+        icon={<Award size={32} />}
+        title="Unwavering Excellence: Our Track Record" 
+        desc="Our proven methodology transforms potential into excellence, securing high percentiles and prestigious placements through disciplined preparation, conceptual mastery, and expert-led guidance."
+      />
+      <FeatureBox 
+        icon={<Globe size={32} />}
+        title="Navigating Futures: Career Guidance Initiative" 
+        desc="Our personalized career counseling goes beyond the classroom, helping students bridge the gap between their academic strengths and their professional aspirations through expert-led seminars, and one-on-one mentorship."
+      />
+      <FeatureBox 
+        icon={<BookOpen size={32} />}
+        title="Empowering Learning Via Modern Infrastructure" 
+        desc="A modern infrastructure is a silent educator, transforming the learning experience from passive to immersive. Amenities like smart classrooms, advanced science labs, and ergonomic study zones foster critical thinking and collaboration."
+      />
+      <FeatureBox 
+        icon={<Target size={32} />}
+        title="The Power of Precision: Testing & Feedback" 
+        desc="Regular assessments are the engine of academic growth. We utilize the 'Testing Effect' - a proven scientific principle where frequent recall through mock tests solidifies knowledge in long-term memory far more effectively than passive reading."
+      />
+    </div>
         </div>
       </div>
+
+      <Gallery />
 
       {/* 6. Footer (Professional) */}
       <footer className="bg-slate-900 text-slate-400 py-12 border-t-4 border-yellow-500">
