@@ -3,6 +3,7 @@ import { BookOpen, Video, Users, Phone, Mail, MapPin, ArrowRight, Award, Target,
 import { Link } from 'react-router-dom';
 import gateVideo from '../assets/disha_gate-open.mp4';
 import prospectus from '../assets/Disha_2026.pdf';
+import sample_paper from '../assets/Sample_Paper_2026.pdf';
 import logo from '../assets/logo.png';
 import Navbar from '../components/Navbar';
 import Gallery from '../components/Gallery';
@@ -55,7 +56,7 @@ const Home = () => {
                     </button>
                     <button 
                         onClick={() => {
-                            window.open('https://cbseacademic.nic.in/sqp_classx_2025-26.html', '_blank');
+                            window.open(sample_paper, '_blank');
                             closePopup();
                         }}
                         className="px-6 py-3 rounded-lg border border-slate-300 font-semibold hover:bg-slate-100 transition"
@@ -127,9 +128,10 @@ const Home = () => {
       <div className="bg-white py-12 border-b border-slate-100 shadow-sm relative -mt-8 mx-6 md:mx-20 rounded-xl z-20">
          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-slate-100">
             <StatItem number="24+" label="Years of Excellence" />
-            <StatItem number="1200+" label="Students Enrolled" />
-            <StatItem number="100%" label="Board Results" />
-            <StatItem number="50+" label="Expert Faculty" />
+            <StatItem number="10,000+" label="Students Enrolled" />
+            <StatItem number="100%" label="Excellence in boards/JEE/NEET/
+            CA/CS/UPSC" />
+            <StatItem number="15+" label="Expert Faculty" />
          </div>
       </div>
 
@@ -224,8 +226,8 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <TimelineItem year="2002" title="Inception" desc="Disha Nucleus School was founded with a vision to provide quality education to all." />
-            <TimelineItem year="2008" title="CBSE Affiliation" desc="Achieved CBSE affiliation (Affiliation No. 331023) to standardize education quality." />
-            <TimelineItem year="2015" title="Excellence Recognition" desc="Established track record in board exams, JEE, and NEET preparations." />
+            <TimelineItem year="2004" title="Excellence Recognition" desc="Established track record in board exams, JEE, and NEET preparations." />
+            <TimelineItem year="2020" title="CBSE Affiliation" desc="Achieved CBSE affiliation (Affiliation No. 331023) to standardize education quality." />
             <TimelineItem year="2024" title="Modern Campus" desc="Upgraded facilities with digital classrooms and advanced laboratories." />
           </div>
         </div>
