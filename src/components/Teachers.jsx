@@ -1,5 +1,15 @@
 import React from 'react';
 import logo from '../assets/logo.png';
+import Er_Ramkrishna_Sinha from '../assets/teachers/Er_Ramkrishna_Sinha.png';
+import Mr_Abhishek_Kr_Sinha from '../assets/teachers/Mr_Abhishek_Kr_Sinha.png';
+import Mr_Santosh_Kr_Sharma from '../assets/teachers/Mr_Santosh_Kr_Sharma.png';
+import Dr_Prem_Shankar_Singh from '../assets/teachers/Dr_Prem_Shankar_Singh.png';
+import Mr_Ravi_Raj from '../assets/teachers/Mr_Ravi_Raj.png';
+import Dr_Vivek_Kumar from '../assets/teachers/Dr_Vivek_Kumar.png';
+import Mr_Amit_Aman from '../assets/teachers/Mr_Amit_Aman.png';
+import Mr_Niraj_Kumar from '../assets/teachers/Mr_Niraj_Kumar.png';
+import Md_Nawaal_Shahid from '../assets/teachers/Md_Nawaal_Shahid.png';
+import Er_Md_Zeeshan_Ahmad from '../assets/teachers/Er_Md_Zeeshan_Ahmad.png';
 
 const teachers = [
   {
@@ -8,30 +18,35 @@ const teachers = [
     qualifications: 'B.Tech- Electrical & Electronics',
     experience: '24 Years of Experience',
     award: 'Bihar Shiksha Ratna Awardee',
+    image: Er_Ramkrishna_Sinha,
   },
   {
     name: 'Mr. Abhishek kr. Sinha',
     subject: 'Mathematics Expert',
     qualifications: 'M.Sc.',
     experience: '18 Years of Experience',
+    image: Mr_Abhishek_Kr_Sinha,
   },
   {
     name: 'Mr. Santosh kr. Sharma',
     subject: 'Biology Expert',
     qualifications: 'M.Sc (Botany), B.Ed',
     experience: '18 Years of Experience',
+    image: Mr_Santosh_Kr_Sharma,
   },
   {
     name: 'Dr. Prem Shankar Singh',
     subject: 'Economics Expert',
     qualifications: 'Ph.D., M.A (Economics)',
     experience: '35 Years of Experience',
+    image: Dr_Prem_Shankar_Singh,
   },
   {
     name: 'Mr. Ravi Raj',
     subject: 'Music Expert',
     qualifications: 'M.A (Music)',
     experience: '9 Years of Experience',
+    image: Mr_Ravi_Raj,
   },
   {
     name: 'Dr. Vivek Kumar',
@@ -39,54 +54,63 @@ const teachers = [
     qualifications: 'Ph.D,B.Ed, M.Com',
     experience: '20 Years of Experience',
     award: 'Pratibha Samman Awardee',
+    image: Dr_Vivek_Kumar,
   },
   {
     name: 'Mr. Amit Aman',
     subject: 'Chemistry Expert',
     qualifications: 'M.Sc(Chemistry) B.Ed.,Ph.D.(pur.)',
     experience: '14 Years of Experience',
+    image: Mr_Amit_Aman,
   },
   {
     name: 'Mr.Rahul Narayan',
     subject: 'Mathematics Expert',
     qualifications: 'M.Sc.',
     experience: '17 Years of Experience',
+    image: logo,
   },
   {
     name: 'Mr. Niraj Kumar',
     subject: 'Biology Expert',
     qualifications: 'M.V.Sc',
     experience: '13 Years of Experience',
+    image: Mr_Niraj_Kumar,
   },
   {
     name: 'Md. Nawaal Shahid',
     subject: 'English Expert',
     qualifications: 'M.A (English)',
     experience: '7 Years of Experience',
+    image: Md_Nawaal_Shahid,
   },
   {
     name: 'Er. Md. Zeeshan Ahmad',
     subject: 'Chemistry Expert',
     qualifications: 'B.Tech-Mechanical, B.Ed.',
     experience: '14 Years of Experience',
+    image: Er_Md_Zeeshan_Ahmad,
   },
   {
     name: 'Mr. Rabindra Kr. Sinha',
     subject: 'Political Science Expert',
     qualifications: 'M.A , BPSC Qualified',
     experience: '22 Years of Experience',
+    image: logo,
   },
   {
     name: 'Mr. Vivek Kumar Pandey',
     subject: 'Economics Expert',
     qualifications: 'M.Com, LL.B',
     experience: '10 Years of Experience',
+    image: logo,
   },
   {
     name: 'Md. Zishan Ansari',
     subject: 'History Expert',
     qualifications: 'M.A(History)',
     experience: '8 Years of Experience',
+    image: logo,
   },
 ];
 
@@ -101,7 +125,7 @@ const Teachers = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {teachers.map((teacher, index) => (
             <div key={index} className="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 text-center">
-              <img src={logo} alt={teacher.name} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
+              <img src={teacher.image} alt={teacher.name} className="w-24 h-24 rounded-full mx-auto mb-4 object-cover" />
               <h3 className="text-xl font-bold text-slate-900">{teacher.name}</h3>
               <p className="text-blue-600 font-semibold mb-4">{teacher.subject}</p>
               <div className="text-sm text-slate-600">
