@@ -1,14 +1,38 @@
 import React from 'react';
-import image1 from '../assets/logo.png';
-import image2 from '../assets/Logo-bg.png';
-import image3 from '../assets/Logo-bg2.png';
+import gallery01 from '../assets/gallery/gallery-01.png';
+import gallery02 from '../assets/gallery/gallery-02.png';
+import gallery03 from '../assets/gallery/gallery-03.png';
+import gallery04 from '../assets/gallery/gallery-04.png';
+import gallery05 from '../assets/gallery/gallery-05.png';
+import gallery06 from '../assets/gallery/gallery-06.png';
+import gallery07 from '../assets/gallery/gallery-07.png';
+import gallery08 from '../assets/gallery/gallery-08.png';
+import gallery09 from '../assets/gallery/gallery-09.png';
+import gallery10 from '../assets/gallery/gallery-10.png';
+import gallery11 from '../assets/gallery/gallery-11.png';
+import gallery12 from '../assets/gallery/gallery-12.png';
+import gallery13 from '../assets/gallery/gallery-13.png';
+import gallery14 from '../assets/gallery/gallery-14.png';
+import gallery15 from '../assets/gallery/gallery-15.png';
 
 
 const Gallery = () => {
   const images = [
-    image1,
-    image2,
-    image3,
+    gallery01,
+    gallery02,
+    gallery03,
+    gallery04,
+    gallery05,
+    gallery06,
+    gallery07,
+    gallery08,
+    gallery09,
+    gallery10,
+    gallery11,
+    gallery12,
+    gallery13,
+    gallery14,
+    gallery15,
   ];
 
   return (

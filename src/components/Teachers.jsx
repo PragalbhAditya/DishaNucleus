@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+//import logo from '../assets/logo.png';
 import Er_Ramkrishna_Sinha from '../assets/teachers/Er_Ramkrishna_Sinha.png';
 import Mr_Abhishek_Kr_Sinha from '../assets/teachers/Mr_Abhishek_Kr_Sinha.png';
 import Mr_Santosh_Kr_Sharma from '../assets/teachers/Mr_Santosh_Kr_Sharma.png';
@@ -10,6 +10,11 @@ import Mr_Amit_Aman from '../assets/teachers/Mr_Amit_Aman.png';
 import Mr_Niraj_Kumar from '../assets/teachers/Mr_Niraj_Kumar.png';
 import Md_Nawaal_Shahid from '../assets/teachers/Md_Nawaal_Shahid.png';
 import Er_Md_Zeeshan_Ahmad from '../assets/teachers/Er_Md_Zeeshan_Ahmad.png';
+import Mr_Rahul_Narayan from '../assets/teachers/Mr_Rahul_Narayan.png';
+import Mr_Rabindra_Kr_Sinha from '../assets/teachers/Mr_Rabindra_Kr_Sinha.png';
+import Mr_Vivek_Kumar_Pandey from '../assets/teachers/Mr_Vivek_Kumar_Pandey.png';
+import Md_Zishan_Ansari from '../assets/teachers/Md_Zishan_Ansari.png';
+
 
 const teachers = [
   {
@@ -21,68 +26,12 @@ const teachers = [
     image: Er_Ramkrishna_Sinha,
   },
   {
-    name: 'Mr. Abhishek kr. Sinha',
-    subject: 'Mathematics Expert',
-    qualifications: 'M.Sc.',
-    experience: '18 Years of Experience',
-    image: Mr_Abhishek_Kr_Sinha,
-  },
-  {
-    name: 'Mr. Santosh kr. Sharma',
-    subject: 'Biology Expert',
-    qualifications: 'M.Sc (Botany), B.Ed',
-    experience: '18 Years of Experience',
-    image: Mr_Santosh_Kr_Sharma,
-  },
-  {
-    name: 'Dr. Prem Shankar Singh',
-    subject: 'Economics Expert',
-    qualifications: 'Ph.D., M.A (Economics)',
-    experience: '35 Years of Experience',
-    image: Dr_Prem_Shankar_Singh,
-  },
-  {
-    name: 'Mr. Ravi Raj',
-    subject: 'Music Expert',
-    qualifications: 'M.A (Music)',
-    experience: '9 Years of Experience',
-    image: Mr_Ravi_Raj,
-  },
-  {
     name: 'Dr. Vivek Kumar',
     subject: 'Accounts & B.St. Expert',
     qualifications: 'Ph.D,B.Ed, M.Com',
     experience: '20 Years of Experience',
     award: 'Pratibha Samman Awardee',
     image: Dr_Vivek_Kumar,
-  },
-  {
-    name: 'Mr. Amit Aman',
-    subject: 'Chemistry Expert',
-    qualifications: 'M.Sc(Chemistry) B.Ed.,Ph.D.(pur.)',
-    experience: '14 Years of Experience',
-    image: Mr_Amit_Aman,
-  },
-  {
-    name: 'Mr.Rahul Narayan',
-    subject: 'Mathematics Expert',
-    qualifications: 'M.Sc.',
-    experience: '17 Years of Experience',
-    image: logo,
-  },
-  {
-    name: 'Mr. Niraj Kumar',
-    subject: 'Biology Expert',
-    qualifications: 'M.V.Sc',
-    experience: '13 Years of Experience',
-    image: Mr_Niraj_Kumar,
-  },
-  {
-    name: 'Md. Nawaal Shahid',
-    subject: 'English Expert',
-    qualifications: 'M.A (English)',
-    experience: '7 Years of Experience',
-    image: Md_Nawaal_Shahid,
   },
   {
     name: 'Er. Md. Zeeshan Ahmad',
@@ -92,25 +41,81 @@ const teachers = [
     image: Er_Md_Zeeshan_Ahmad,
   },
   {
+    name: 'Mr. Amit Aman',
+    subject: 'Chemistry Expert',
+    qualifications: 'M.Sc(Chemistry) B.Ed.,Ph.D.(pur.)',
+    experience: '14 Years of Experience',
+    image: Mr_Amit_Aman,
+  },
+  {
+    name: 'Mr. Abhishek kr. Sinha',
+    subject: 'Mathematics Expert',
+    qualifications: 'M.Sc.',
+    experience: '18 Years of Experience',
+    image: Mr_Abhishek_Kr_Sinha,
+  },
+  {
+    name: 'Mr. Rahul Narayan',
+    subject: 'Mathematics Expert',
+    qualifications: 'M.Sc.',
+    experience: '17 Years of Experience',
+    image: Mr_Rahul_Narayan,
+  },
+  {
+    name: 'Mr. Santosh kr. Sharma',
+    subject: 'Biology Expert',
+    qualifications: 'M.Sc (Botany), B.Ed',
+    experience: '18 Years of Experience',
+    image: Mr_Santosh_Kr_Sharma,
+  },
+  {
+    name: 'Mr. Niraj Kumar',
+    subject: 'Biology Expert',
+    qualifications: 'M.V.Sc',
+    experience: '13 Years of Experience',
+    image: Mr_Niraj_Kumar,
+  },
+  {
+    name: 'Dr. Prem Shankar Singh',
+    subject: 'Economics Expert',
+    qualifications: 'Ph.D., M.A (Economics)',
+    experience: '35 Years of Experience',
+    image: Dr_Prem_Shankar_Singh,
+  },
+  {
+    name: 'Md. Nawaal Shahid',
+    subject: 'English Expert',
+    qualifications: 'M.A (English)',
+    experience: '7 Years of Experience',
+    image: Md_Nawaal_Shahid,
+  },
+  {
+    name: 'Mr. Ravi Raj',
+    subject: 'Music Expert',
+    qualifications: 'M.A (Music)',
+    experience: '9 Years of Experience',
+    image: Mr_Ravi_Raj,
+  },
+  {
     name: 'Mr. Rabindra Kr. Sinha',
     subject: 'Political Science Expert',
     qualifications: 'M.A , BPSC Qualified',
     experience: '22 Years of Experience',
-    image: logo,
+    image: Mr_Rabindra_Kr_Sinha,
   },
   {
     name: 'Mr. Vivek Kumar Pandey',
     subject: 'Economics Expert',
     qualifications: 'M.Com, LL.B',
     experience: '10 Years of Experience',
-    image: logo,
+    image: Mr_Vivek_Kumar_Pandey,
   },
   {
     name: 'Md. Zishan Ansari',
     subject: 'History Expert',
     qualifications: 'M.A(History)',
     experience: '8 Years of Experience',
-    image: logo,
+    image: Md_Zishan_Ansari,
   },
 ];
 
