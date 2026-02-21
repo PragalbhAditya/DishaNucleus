@@ -5,6 +5,8 @@ import gateVideo from '../assets/disha_gate-open.mp4';
 import prospectus from '../assets/Disha_2026.pdf';
 import sample_paper from '../assets/Sample_Paper_2026.pdf';
 import logo from '../assets/logo.png';
+import director from '../assets/teachers/director.png';
+import principal from '../assets/teachers/principal.png';
 import Navbar from '../components/Navbar';
 import Gallery from '../components/Gallery';
 import Teachers from '../components/Teachers';
@@ -145,33 +147,29 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Founder Message */}
-            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border-l-4 border-blue-600 shadow-md">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">F</div>
+            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border-t-4 border-blue-600 shadow-md">
+                <img src={director} alt="Founder" className="w-full h-auto rounded-lg mb-6"/>
                 <div>
-                  <h4 className="text-xl font-bold text-slate-900">Message from the Founder</h4>
-                  <p className="text-sm text-slate-600">Chandrakala Sinha Gyanoday Trust</p>
-                </div>
-              </div>
+                  <h4 className="text-2xl font-bold text-slate-900">Message from the Founder</h4>
+                  <p className="text-sm text-slate-600 mb-4">Chandrakala Sinha Gyanoday Trust</p>
               <p className="text-slate-700 leading-relaxed mb-4 italic">
                 "Education is not just about academics; it's about shaping the character of our children. At Disha Nucleus, we believe in fostering an environment where every child can discover their potential and grow into a responsible, compassionate, and successful individual. Our commitment is to provide holistic education that prepares students not just for exams, but for life."
               </p>
               <p className="text-slate-600 text-sm font-semibold">- Founder & Trustee</p>
+                </div>
             </div>
 
             {/* Principal Message */}
-            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border-l-4 border-blue-600 shadow-md">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-16 h-16 bg-blue-900 rounded-full flex items-center justify-center text-white font-bold text-2xl flex-shrink-0">P</div>
+            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl border-t-4 border-blue-600 shadow-md">
+                <img src={principal} alt="Principal" className="w-full h-auto rounded-lg mb-6"/>
                 <div>
-                  <h4 className="text-xl font-bold text-slate-900">Message from the Principal</h4>
-                  <p className="text-sm text-slate-600">Principal</p>
-                </div>
-              </div>
+                  <h4 className="text-2xl font-bold text-slate-900">Message from the Principal</h4>
+                  <p className="text-sm text-slate-600 mb-4">Principal</p>
               <p className="text-slate-700 leading-relaxed mb-4 italic">
                 "Welcome to Disha Nucleus School! As Principal, I take immense pride in our institution's commitment to academic excellence and all-round development. With a dedicated team of experienced educators, state-of-the-art infrastructure, and a student-centric approach, we strive to create an atmosphere where curiosity thrives, talents bloom, and futures are shaped. Your child's success is our mission."
               </p>
               <p className="text-slate-600 text-sm font-semibold">- Principal</p>
+                </div>
             </div>
           </div>
         </div>
@@ -315,7 +313,7 @@ const Home = () => {
               <h4 className="text-white text-lg font-bold mb-4">Contact Information</h4>
               <p className="text-sm flex items-start gap-3 mb-3">
                 <MapPin size={18} className="text-blue-500 mt-1"/> 
-                <span>Near Indoor Stadium, Sandy,<br/>Ghooran Peer Baba Chowk Chhoti Khanjarpur, Bhagalpur, Bihar- 812001</span>
+                <span>Near Indoor Stadium, Sandy's Compound,<br/>Ghooran Peer Baba Chowk Chhoti Khanjarpur, Bhagalpur, Bihar- 812001</span>
               </p>
               <p className="text-sm flex items-center gap-3 mb-3">
                 <Phone size={18} className="text-blue-500"/> +91 64124 34301
